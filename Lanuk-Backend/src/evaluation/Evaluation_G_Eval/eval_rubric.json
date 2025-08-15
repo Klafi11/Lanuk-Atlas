@@ -1,0 +1,41 @@
+[
+    {   "criteria_titel": "Relevanz und Fokus der Themenfelder",
+        "criteria_description": "Wie relevant und fokussiert sind die LLM generierten Inhalte der behandelten Themen für den Bericht des Klimaatlas? Bewerte die Relevanz und den thematischen Fokus des folgenden Berichtstextes im Kontext eines Klimaatlas. Analysiere, ob der Text die zentralen Themenfelder angemessen und zielgerichtet behandelt.",
+        "score1_description": "Nicht relevant – die behandelten Inhalte haben keinen Bezug zu den Themen für den Klimaatlas",
+        "score2_description": "Sehr wenig relevant – die Inhalte berühren die Themen des Klimaatlas nur am Rande und enthalten überwiegend themenfremde Informationen",
+        "score3_description": "Wenig relevant – die Inhalte behandeln einige Aspekte der Klimaatlas-Themen, aber oberflächlich und mit vielen Abschweifungen oder Lücken",
+        "score4_description": "Teilweise relevant – die Inhalte decken manche wichtigen Aspekte der Klimaatlas-Themen ab, weisen jedoch deutliche thematische Lücken oder Ungenauigkeiten auf",
+        "score5_description": "Überwiegend relevant – die Inhalte behandeln die meisten wichtigen Aspekte der Klimaatlas-Themen (Temperatur, Niederschlag, etc.) mit nur wenigen kleineren Lücken", 
+        "score6_description": "Vollständig relevant und fokussiert – die Inhalte behandeln alle wichtigen Aspekte der Klimaatlas-Themen umfassend, präzise und zielgerichtet"
+    },
+    {   "criteria_titel": " Genauigkeit der Daten",
+        "criteria_description": "Sind die im generierten Berichtstext dargestellten Daten korrekt und konsistent? - Bewerte die Genauigkeit und Konsistenz der im folgenden LLM-generierten Bericht enthaltenen Daten. Prüfe, ob alle Zahlenwerte, Prozentangaben, Berechnungen und Tendenzbeschreibungen exakt mit den entsprechenden Angaben in den Tabellen des Berichts übereinstimmen.",
+        "score1_description":"Sehr ungenau – Die Daten im Bericht stimmen fast nie mit den tatsächlichen Daten überein. Es gibt so viele Fehler und falsche Informationen, die keinen Bericht inhaltlich zulassen.",
+        "score2_description": "Ungenau – Die Daten stimmen nur selten mit den Inhalten überein. Es gibt viele Fehler, die den Anforderungen an den Bericht nicht entsprechen.",
+        "score3_description": "Teilweise genau – Viele Daten stimmen mit den Inhalten überein, aber es gibt immer noch beeinträchtigende Fehler oder Ungenauigkeiten, die korrigiert werden müssen.",
+        "score4_description": "Meistens genau – Fast alle Daten sind korrekt und stimmen mit den Inhalten überein. Es gibt nur wenige kleinere Fehler, die die Gesamtqualität nicht wesentlich beeinträchtigen.",
+        "score5_description": "Sehr genau – Nahezu alle Daten sind korrekt und stimmen mit den Inhalten überein. Es gibt nur minimale Abweichungen, die vernachlässigbar sind.",
+        "score6_description": "Vollständig genau – Alle Daten im Bericht sind korrekt und stimmen exakt mit den Inhalten und überein. Es gibt keine Fehler oder Ungenauigkeiten."
+
+    },
+    {   "criteria_titel": "Struktur und Organisation",
+        "criteria_description": "Wie gut ist der Bericht strukturiert und organisiert? - Bewerte die Struktur und Organisation des folgenden Berichtstextes. Analysiere, ob der Text klar gegliedert ist und eine nachvollziehbare, logische Reihenfolge der Informationen aufweist.",
+        "score1_description": "Schlecht strukturiert – der Bericht ist völlig unorganisiert; fehlende logische Struktur und Organisation.",
+        "score2_description": "Schwach strukturiert – der Bericht ist größtenteils unorganisiert, mit nur wenigen Ansätzen einer Struktur.",
+        "score3_description": "Teilweise strukturiert - eine grundlegende Organisation und Struktur im Bericht ist vorhanden, wird aber nicht konsequent umgesetzt.",
+        "score4_description": "Überwiegend gut strukturiert - eine klare Berichtsorganisation ist größtenteils umgesetzt, mit wenigen Inkonsistenzen in der Struktur.",
+        "score5_description": "Sehr gut strukturiert - eine klare Berichtsorganisation ist umgesetzt, mit vernachlässigbaren Abweichungen in der Struktur.",
+        "score6_description": "Ausgezeichnet strukturiert - Der Berichtstext ist perfekt organisiert, mit einer logischen und intuitiven Struktur."
+
+    },
+    {
+        "criteria_titel": "Flüssigkeit - Lesbarkeit, Verständlichkeit, Lesefluss",
+        "criteria_description": "Wie leicht lässt sich der LLM generierte Bericht für den Leser erfassen und entsteht ein natürlicher Lesefluss? - Bewerte die Flüssigkeit, Lesbarkeit und Verständlichkeit des folgenden Berichtstextes. Analysiere, wie leicht sich der Text erfassen lässt und ob ein natürlicher Lesefluss entsteht.",
+        "score1_description": "Sehr unflüssig – Der Text ist sehr schwer verständlich, mit vielen sprachlichen / grammatikalischen Fehlern, fehlerhaften Satzaufbau und unklaren Formulierungen. Der Lesefluss ist stark gestört.",
+        "score2_description": "Unflüssig – Der Text enthält zahlreiche sprachliche Mängel, wie z.B. Grammatikfehler, ungeschickte Satzkonstruktionen oder unklare Formulierungen, die den Lesefluss beeinträchtigen.",
+        "score3_description": "Teilweise flüssig – Der Text ist in einigen Abschnitten verständlich, aber es gibt immer noch auftretende sprachliche Fehler oder ungeschickte Formulierungen, die den Lesefluss stören.",
+        "score4_description": "Meistens flüssig – Der Text ist größtenteils gut verständlich und flüssig geschrieben, mit nur gelegentlichen kleinen Fehlern oder ungeschickten Formulierungen, die den Lesefluss nicht wesentlich beeinträchtigen.",
+        "score5_description": "Sehr flüssig – Der Text ist durchgehend gut verständlich und flüssig geschrieben, mit nur minimalen sprachlichen Unstimmigkeiten, die kaum auffallen und den Lesefluss nicht stören.", 
+        "score6_description": "Vollständig flüssig – Der Text ist ausgezeichnet zu verstehen und sprachlich sehr natürlich. Es gibt keine sprachlichen Fehler oder ungeschickten Formulierungen. Der Lesefluss ist ausgezeichnet."
+    }
+]

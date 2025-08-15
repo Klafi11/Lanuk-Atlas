@@ -1,0 +1,94 @@
+services:
+  postgres:
+    container_name: database
+    restart: unless-stopped
+    image: postgres:latest
+    networks:
+      - weather_api
+    volumes:
+      - ./Lanuk-DB/Weather_db.sql:/docker-entrypoint-initdb.d/schema.sql
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    env_file:
+      - ${ENV_FILE:-.env}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d $$POSTGRES_DB -U $$POSTGRES_USER"]
+      timeout: 2s
+      interval: 5s
+      retries: 10
+    ports:
+      - "${POSTGRES_PORT_OUT}:${POSTGRES_PORT}"
+
+  adminer:
+    container_name: database-frontend
+    image: adminer:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+    - weather_api
+    depends_on:      
+      postgres: 
+        condition: service_healthy
+
+  backend:
+    container_name: backend
+    build:
+      context: ./Lanuk-Backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
+      - BACKEND_PORT=${BACKEND_PORT}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - ${ENV_FILE:-.env}
+    networks:
+      - weather_api
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    volumes:
+      - ./logs:/app/logs 
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${BACKEND_PORT}/api/hello"]
+      interval: 300s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./Lanuk-Frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - SERVER_NAME=${SERVER_NAME}
+      - PROXY_PORT=${PROXY_PORT}
+      - BACKEND_HOST=${BACKEND_HOST}
+      - BACKEND_PORT=${BACKEND_PORT}
+      - PROXY_TIMEOUT=${PROXY_TIMEOUT}
+    env_file:
+      - ${ENV_FILE:-.env}
+    ports:
+      - "${FRONTEND_PORT}:${PROXY_PORT}"
+    depends_on:
+      - backend
+    networks:
+      - weather_api
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${FRONTEND_PORT}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  weather_api:
+    driver: bridge
+
+volumes:     
+  postgres_data:
