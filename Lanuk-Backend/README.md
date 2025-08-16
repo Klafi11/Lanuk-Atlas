@@ -27,13 +27,13 @@ Die Funktionalität ist modular im `src/`-Verzeichnis organisiert und wird über
 | Methode & Route                  | Beschreibung |
 |----------------------------------|--------------|
 | **`GET /api/retrieveReports`**   | Startet die Berichtspipeline und liefert generierte Berichtsabschnitte. |
-| **`POST /api/pdfreports`**       | Erzeugt einen PDF-Report aus bereitgestellten Berichtsdaten. |
-| **`POST /api/websearch`**        | Führt Websuche zu Berichtsthemen durch und liefert Zusammenfassung mit Quellen. |
+| **`POST /api/pdfreports`**       | Erzeugt einen PDF-Report aus bereitgestellten Berichtsdaten & Berichtsabschnitten. |
+| **`POST /api/websearch`**        | Führt Websuche zu Berichtsthemen durch und liefert Zusammenfassung aktueller Wetterereignisse mit Quellen. |
 | **`GET /api/tabellendaten`**     | Liefert Basis-Tabellendaten zu Temperatur, Niederschlag, Sonne & Stationen. |
 | **`POST /api/heading`**          | Generiert passende Berichtüberschriften. |
 | **`GET /api/timeseries`**        | Liefert Zeitreihendaten für Diagramme. |
-| **`GET /api/dwdwetter`**         | Ruft Wetterbericht vom DWD (Deutscher Wetterdienst) ab. |
-| **`POST /api/stationdata`**      | Liefert Messwerte ausgewählter Stationen. |
+| **`GET /api/dwdwetter`**         | Ruft Wetterberichte vom DWD (Deutscher Wetterdienst) ab und erstellt eine Zusammenfassung relevante Wetterereignisse in der gegebenen Zeiteinheit. |
+| **`POST /api/stationdata`**      | Liefert Temperatur-Kenntage ausgewählter Stationen. |
 | **`POST /api/downloadfiles`**    | Speichert Berichts-Daten, erstellt PDF + SVG-Grafiken und gibt ZIP zurück. |
 
 ---
@@ -41,7 +41,7 @@ Die Funktionalität ist modular im `src/`-Verzeichnis organisiert und wird über
 ## 🔄 Betrieb & Workflows
 1. **Standard-Modus**: DB-Retrieval → Few-Shot → Self-Correction  
 2. **Advanced-Modus**: Standard-Modus + automatisierte Integration (ReAct-Agent + DWD-Wetterbericht)  
-3. **Tools**: Websuche, Wetterbericht, Überschriften, Stationen, Grafiken, PDF-Generierung
+3. **Tools**: Websuche, Wetterbericht, Überschriftengenerator, Stationensabfragen, Grafiken, PDF-Generierung
 
 ---
 

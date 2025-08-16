@@ -15,7 +15,7 @@ Der **Lanuk-Atlas** beschleunigt die Erstellung von Monats-, Quartals- und Jahre
 
 **Betriebsmodi**
 - **Standard**: Robuste, kerndatenbasierte Pipeline  
-- **Advanced**: Plus ReAct-Zeitreihen-Agent und automatische DWD-Integration  
+- **Advanced**: Plus automatisierte Integration des ReAct Zeitreihennalyse Agenten & DWD Wetterbericht 
 
 ---
 
@@ -129,7 +129,7 @@ Lanuk-Atlas/
 
 ## Relevante Skripte ausgewählter Kapitel der Masterarbeit
 
-Dieses Dokument listet die relevanten Code-Dateien und Ordner auf, die in den jeweiligen Kapiteln der Masterarbeit erwähnt werden.
+Dieser Abschnitt listet die relevanten Code-Dateien und Ordner auf, die in den jeweiligen Kapiteln der Masterarbeit erwähnt werden.
 
 
 ## 📍 Kapitel 5 – Projektphase 1
@@ -235,7 +235,7 @@ Dieses Dokument listet die relevanten Code-Dateien und Ordner auf, die in den je
 
 --- 
 ## 🌍 Lanuk-Atlas – .env Konfiguration
-## Diese Datei enthält alle benötigten Umgebungsvariablen
+## Dieser Abschnitt enthält alle benötigten Umgebungsvariablen
 ## für den Betrieb von Datenbank, Backend, Frontend und APIs.
 
 **Parameterübersicht:**
@@ -268,3 +268,17 @@ Dieses Dokument listet die relevanten Code-Dateien und Ordner auf, die in den je
   - `FRONTEND_PORT` — Port des Frontend-Servers  
 
 ---
+## 🚀 Initiales Setup des Prototyps
+
+Zur Erstinstallation und Einrichtung des Prototyps stehen zwei Shell-Skripte bereit:
+
+- **`deploy.sh`** – Führt die notwendigen Schritte zum Aufbau der Umgebung aus (z. B. Container starten, Abhängigkeiten installieren, Konfigurationen setzen).
+- **`fill-database.sh`** – Füllt die Datenbank mit initialen Daten aus dem Lanuk-DB/main.py Skript.
+
+### Verwendung
+```bash
+# Schritt 1: Deploy-Skript ausführen
+./deploy.sh
+
+# Schritt 2: Datenbank mit Beispieldaten befüllen
+./fill-database.sh
