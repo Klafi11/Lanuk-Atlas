@@ -235,8 +235,9 @@ Dieser Abschnitt listet die relevanten Code-Dateien und Ordner auf, die in den j
 
 --- 
 ## 🌍 Lanuk-Atlas – .env Konfiguration
-## Dieser Abschnitt enthält alle benötigten Umgebungsvariablen
-## für den Betrieb von Datenbank, Backend, Frontend und APIs.
+
+### Dieser Abschnitt enthält alle benötigten Umgebungsvariablen
+### für den Betrieb von Datenbank, Backend, Frontend und APIs.
 
 **Parameterübersicht:**
 
@@ -280,5 +281,5 @@ Zur Erstinstallation und Einrichtung des Prototyps stehen zwei Shell-Skripte ber
 # Schritt 1: Deploy-Skript ausführen
 ./deploy.sh
 
-# Schritt 2: Datenbank mit Beispieldaten befüllen
+# Schritt 2: Datenbank mit Daten befüllen
 ./fill-database.sh
