@@ -39,10 +39,9 @@ Die Funktionalität ist modular im `src/`-Verzeichnis organisiert und wird über
 ---
 
 ## 🔄 Betrieb & Workflows
-1. **ETL-Pipeline**: Monatliche Datenübernahme von DWD/LUQS  
-2. **Standard-Modus**: DB-Retrieval → Few-Shot → Self-Correction  
-3. **Advanced-Modus**: Standard-Modus + automatisierte Integration (ReAct-Agent + DWD-Wetterbericht)  
-4. **Tools**: Websuche, Wetterbericht, Überschriften, Stationen, Grafiken, PDF-Generierung
+1. **Standard-Modus**: DB-Retrieval → Few-Shot → Self-Correction  
+2. **Advanced-Modus**: Standard-Modus + automatisierte Integration (ReAct-Agent + DWD-Wetterbericht)  
+3. **Tools**: Websuche, Wetterbericht, Überschriften, Stationen, Grafiken, PDF-Generierung
 
 ---
 

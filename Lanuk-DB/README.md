@@ -12,5 +12,3 @@ Das **Lanuk-DB** bildet über `main.py` die zentrale Datenaufbereitung. Die gesa
 | `text_data/`          | Hinzufügen der Klimaatlas Alt-Berichte |
 | `utils/`              | Hilfsfunktionen|
 | `WeatherSpider/`      | DWD Wetterberichtstool Webscrapper |
-
-Über das main.py Skript wird die zentrale Datenaufbereitung gesteuert.

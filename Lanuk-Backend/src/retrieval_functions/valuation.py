@@ -19,7 +19,7 @@ Validiert und verfeinert generierte Berichtstexte:
 - `check_reports(...)`: Bewertet/vereinheitlicht mehrere Rohtexte (z. B. von
   GPT/Claude/DeepSeek) anhand einer standardisierten Instruktions-Prompt in templates/template_val_tasks und /template_val_std(_adv)
   und liefert die korrigierten Berichtstexte zurück.
-- `check_reports_adv(...)`: Wie oben, aber mit erweitertem Bewertungs-Prompt
+- `check_reports_adv(...)`: Wie oben, aber mit erweitertem Kontext
   (Advanced-Pfad).
 
 """

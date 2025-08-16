@@ -181,7 +181,8 @@ Dieses Dokument listet die relevanten Code-Dateien und Ordner auf, die in den je
 - [Agent-Instruktionen](Lanuk-Backend/src/templates/template_agents_adv.py)  
 
 ### 7.3.5 Optimierung – Self-Correction
-- [Self-Correction-Logik](Lanuk-Backend/src/retrieval_functions/valuation.py)  
+- [Self-Correction-Logik](Lanuk-Backend/src/retrieval_functions/valuation.py)
+- [Self-Correction-Aufgaben](Lanuk-Backend/src/templates/template_val_tasks.py)  
 - [Prompt Standard](Lanuk-Backend/src/templates/template_val_std.py)  
 - [Prompt Advanced](Lanuk-Backend/src/templates/template_val_adv.py)  
 
